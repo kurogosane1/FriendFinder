@@ -1,3 +1,8 @@
+
+
+
+
+
 //This is where all the friends score are going to be stored//
 //We create an Array of friends and their score//
 var tableArray = [
