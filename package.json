@@ -2,17 +2,20 @@
   "name": "friendfinder",
   "version": "1.0.0",
   "description": "a friend finder",
-  "main": "index.js",
-  "dependencies": {},
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.16.1"
+  },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kurogosane1/FriendFinder.git"
   },
-  "author": "",
+  "author": "Syed Saad Khurshid",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kurogosane1/FriendFinder/issues"
