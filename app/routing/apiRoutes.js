@@ -12,14 +12,16 @@ module.exports = function(app) {
   // In each of the below cases when a user visits a link
   // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
   // ---------------------------------------------------------------------------
-app.get("/api/friends", function(req, res) {
-    res.json(friendsData);
+    app.get("/api/friends", function(req, res) {
+            res.json(friendsData);
   });
+
+
 
 //   Post request when the user submits the form on the questionaire page
     app.post("/api/friends", function(req, res){
         // store the user input in a variable to use
-        friendsData = req.body.score;
+        userChoice = req.body.score;
         
         // we begin by setting variables to match the scores
         //who matches the best with the user is the one to use//
@@ -31,6 +33,7 @@ app.get("/api/friends", function(req, res) {
 
         //we are going to create a new variable that would be best matching with the scores//
         var overallScore;
+        console.log(friendsData.length);
 
         for (var i = 0; i< friendsData.length;i++)
         {       
@@ -40,7 +43,7 @@ app.get("/api/friends", function(req, res) {
             {
                 // now we shall get the difference between the total addition of the friends database score and the user entered score//
                 overallScore = overallScore +(Math.abs(userChoice[j] -friendsData[i].score[i]));
-            }//nested for loop ends here//
+            };//nested for loop ends here//
 
             // after the loop, if the overall score is less than the current score, then the score is replace by//
             // the overallScore, and the best match index is changed to the current position in the loop
@@ -58,7 +61,7 @@ app.get("/api/friends", function(req, res) {
         //send the data for the best match to the server
         res.json(friendsData[overallMatch]);
 
-    })
+    });
 
 // app.use("/api/survey", function(req, res) {
 //     res.json(userChoice);
