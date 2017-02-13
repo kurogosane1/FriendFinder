@@ -4,7 +4,8 @@
   "description": "a friend finder",
   "main": "server.js",
   "dependencies": {
-    "body-parser": "^1.16.1"
+    "body-parser": "^1.16.1",
+    "path": "^0.12.7"
   },
   "devDependencies": {},
   "scripts": {

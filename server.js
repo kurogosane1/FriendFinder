@@ -1,6 +1,7 @@
 //Using the necessary NPM packages//
 var express = require("express");
 var bodyParser = require("body-parser");
+var path = require('path');
 
 // Tells node that we are creating an "express" server
 var app = express();
@@ -21,6 +22,9 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
+
+
+
 
 // LISTENER
 // The below code effectively "starts" our server

@@ -1,11 +1,6 @@
-
-
-
-
-
 //This is where all the friends score are going to be stored//
 //We create an Array of friends and their score//
-var tableArray = [
+var friendsData = [
     {
         name: "Anthony",
         photo: "https://www.linkedin.com/in/anthony-myhre-289b629a/",
@@ -34,5 +29,6 @@ var tableArray = [
     }
 ];
 
+
 // Note how we export the array. This makes it accessible to other files using require.
-module.exports = tableArray;
+module.exports = friendsData;
